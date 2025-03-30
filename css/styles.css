@@ -35,8 +35,8 @@ a {
 .container {
     display: inline;
     border-radius: 20px;
-    width: 95%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     background-color: #050505;
     display: flex;
     align-items: center;
