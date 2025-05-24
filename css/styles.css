@@ -78,7 +78,7 @@ a {
     justify-content: left;
     align-items: center;
     text-align: left;
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
 .img-user {
@@ -353,7 +353,7 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 60px;
+    height: 75px;
 }
 
 .widget1:hover,
