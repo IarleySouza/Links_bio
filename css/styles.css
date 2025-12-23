@@ -87,6 +87,9 @@ a {
     border-radius: 8px;
     border: 2px solid var(--color-destaque);
 }
+.img-user img {
+    width: 100%;
+}
 
 .name-user h1 {
     font-size: 1.2rem;
