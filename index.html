@@ -30,7 +30,7 @@
                     </div>
                     <div class="name-user">
                         <h1>Iarley Souza</h1>
-                        <span>Engenheiro de Software no @Itaú unibanco</span>
+                        <span>Software Engineer at @Itaú unibanco</span>
                     </div>
                 </div>
                 <div class="info-icon">
@@ -41,7 +41,6 @@
                 <div class="hard-skills">
                     <span class="destaque">Hard Skills</span>
                     <div class="skills-icons">
-                        <i class="devicon-react-original colored"></i>
                         <i class="devicon-github-original"></i>
                         <i class="devicon-git-plain colored"></i>
                         <i class="devicon-docker-plain colored"></i>
@@ -50,8 +49,6 @@
                         <i class="devicon-java-plain colored"></i>
                         <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
                         <i class="devicon-spring-plain colored"></i>
-                        
-
                     </div>
                 </div>
             </div>
@@ -60,7 +57,7 @@
                 <!-- Link do site -->
                 <a target="_blank" class="site">
                     <div class="text-site">
-                        <h1>Software Developer</h1>
+                        <h1>Software Engineer</h1>
                         <span>@souzaa</span>
                     </div>
                     <div class="img-site"></div>
@@ -83,7 +80,7 @@
                     </a>
 
                     <!-- Email -->
-                    <a class="box-social mail" href="mailto:iarleysouza615@email.com" target="_blank">
+                    <a class="box-social mail" href="mailto:iarleysouza615@gmail.com" target="_blank">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -93,17 +90,55 @@
             <div class="widget4">
                 <a href="https://iarleysouza.github.io/Portfolio_2.0/#inicio" class="meu-site" target="_blank">
                     <img src="image/web-white-icon.png" alt="">
-                    <h1>Meu site portifolio.</h1>
+                    <h1>My portfolio website.</h1>
                 </a>
             </div>
 
-            <!-- WIDGET 5: Embeds do Spotify -->
+            <!-- WIDGET 5: Carrossel de Certificações -->
             <div class="widget5">
-                <span>O que estou ouvindo...</span>
+                <span>Certifications & Achievements</span>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image/clooud.png" alt="Certificação 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/sre.png" alt="Certificação 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/generativeIA.png" alt="Certificação 3">
+                        </div>
+                    </div>
+                    <button class="carousel-prev" onclick="moveCarousel(-1)">&#10094;</button>
+                    <button class="carousel-next" onclick="moveCarousel(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- WIDGET 6: Embeds do Spotify -->
+            <div class="widget6">
+                <span>What I'm listening to...</span>
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/66kQ7wr4d2LwwSjr7HXcyr?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveCarousel(n) {
+            const items = document.querySelectorAll('.carousel-item');
+            currentSlide += n;
+            
+            if (currentSlide >= items.length) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = items.length - 1;
+            }
+            
+            items.forEach(item => item.classList.remove('active'));
+            items[currentSlide].classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
