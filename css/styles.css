@@ -14,9 +14,14 @@ body {
     background-color: var(--page-bg);
     width: 100%;
     min-height: 100vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 1rem;
     transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1.5rem 1.2rem;
+    }
 }
 
 a {
