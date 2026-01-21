@@ -24,6 +24,7 @@ body {
     }
 }
 
+
 a {
     text-decoration: none;
 }
@@ -221,6 +222,11 @@ a {
     font-size: 1rem;
     padding-bottom: 0.3rem;
 }
+@media (max-width: 480px) {
+    .destaque {
+        font-size: 0.85rem;
+    }
+}
 
 /* WIDGET 3: Redes sociais e link do site */
 .widget3 {
@@ -254,15 +260,21 @@ a {
 }
 
 .text-site h1 {
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
     color: var(--color-white);
     font-weight: bold;
     font-size: 1rem;
 }
 
+@media (max-width: 480px) {
+    .text-site h1 {
+        font-size: 0.85rem;
+    }
+}
+
 .text-site span {
     color: var(--color-text-secondary);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .img-site {
