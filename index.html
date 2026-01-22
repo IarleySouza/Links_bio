@@ -102,18 +102,33 @@
                 <span>Certifications & Achievements</span>
                 <div class="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-title="AWS Certified Cloud Practitioner" data-description="Profissional certificado em AWS com expertise em cloud computing, capaz de projetar, implementar e otimizar infraestruturas escaláveis e resilientes na plataforma.">
                             <img src="image/clooud.png" alt="Certificação 1">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-title="SRE - Trained" data-description="Certificação em SRE que aborda práticas de confiabilidade, automação e otimização de sistemas para garantir performance. Entender a importância do uso de práticas e ferramentas de observabilidade; Ser capaz de tornar suas aplicações confiáveis e com maior disponibilidade, utilizando conhecimentos teóricos e prático adquirido.">
                             <img src="image/sre.png" alt="Certificação 2">
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-title="Practitioner - Generative AI" data-description="A pessoa que detém este Badge adquiriu os conceitos fundamentais sobre Inteligência Artificial Generativa, tanto no aspecto teórico quanto no prático. É capaz de entender os alicerces básicos da mecânica que sustenta as principais ferramentas de Inteligência Artificial Generativa, bem como compreender os seus potenciais casos de uso no âmbito social.">
                             <img src="image/generativeIA.png" alt="Certificação 3">
+                        </div>
+                        <div class="carousel-item" data-title="Engenharia do Caos - Trained" data-description="O hub de 'Engenharia do Caos' apresenta a importância de validarmos a resiliência implementada em nossos produtos por meio da Engenharia do Caos. Ele contempla conteúdos teóricos e práticos, além de mostrar a aplicação em ambientes produtivos. No nível trained é possível atestar Conceitos de engenharia do Caos, resiliência e nosso produto IUChaos.">
+                            <img src="image/Caos.png" alt="Certificação 4">
+                        </div>
+                        <div class="carousel-item" data-title="Data Talks Club" data-description="A pessoa que detém esta Badge possui conhecimentos sobre disciplinas relacionadas a dados, tendo sido introduzida aos conceitos e termos correntes em áreas como: Modelagem de Dados, Engenharia de Dados e Analytics, Ciência de Dados, Engenharia de Machine Learning e Governança de Dados. Sendo, portanto, letrada em dados, tendo intuição sobre o ciclo do dado, desde sua aquisição e tratamento até análises avançadas, entrega contínua e geração de valor.">
+                            <img src="image/dataTalks.png" alt="Certificação 5">
                         </div>
                     </div>
                     <button class="carousel-prev" onclick="moveCarousel(-1)">&#10094;</button>
                     <button class="carousel-next" onclick="moveCarousel(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Modal para Certificações -->
+            <div id="cert-modal" class="modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeCertModal()">&times;</span>
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
                 </div>
             </div>
 
@@ -141,6 +156,39 @@
             items.forEach(item => item.classList.remove('active'));
             items[currentSlide].classList.add('active');
         }
+
+        // Certificações Modal
+        function openCertModal() {
+            const items = document.querySelectorAll('.carousel-item');
+            const activeItem = items[currentSlide];
+            const title = activeItem.getAttribute('data-title');
+            const description = activeItem.getAttribute('data-description');
+            
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-description').textContent = description;
+            document.getElementById('cert-modal').classList.add('active');
+        }
+
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.remove('active');
+        }
+
+        // Adicionar listener ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach(item => {
+                item.addEventListener('click', openCertModal);
+                item.style.cursor = 'pointer';
+            });
+        });
+
+        // Fechar modal ao clicar fora
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('cert-modal');
+            if (event.target === modal) {
+                closeCertModal();
+            }
+        });
 
         // Theme toggle
         (function() {
