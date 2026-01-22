@@ -257,7 +257,7 @@ a {
 .site {
     border-radius: 12px;
     background-color: var(--color-black);
-    width: 50%;
+    width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -314,17 +314,16 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 15px;
 }
 
 .redes-sociais a {
     background-color: var(--color-black);
     border-radius: 10px;
-    width: 45%;
-    height: 45%;
+    width: 60px;
+    height: 60px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -336,17 +335,6 @@ a {
 
 .redes-sociais .linkedin:hover i {
     color: #154f92;
-    transition: color 0.3s;
-}
-
-
-.redes-sociais .instagram:hover i {
-    color: #E1306C;
-    transition: color 0.3s;
-}
-
-.redes-sociais .spotify:hover i {
-    color: #4add06;
     transition: color 0.3s;
 }
 
